@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/etAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:inputType="numberDecimal"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnTip0"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etAmount"
+        android:layout_below="@+id/etAmount"
+        android:layout_marginTop="66dp"
+        android:onClick="onTipCalculate"
+        android:tag="0.1"
+        android:text="@string/tip0" />
+
+    <Button
+        android:id="@+id/btnTip1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnTip0"
+        android:layout_centerHorizontal="true"
+        android:onClick="onTipCalculate"
+        android:tag="0.15"
+        android:text="@string/tip1" />
+
+    <Button
+        android:id="@+id/btnTip2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnTip1"
+        android:layout_alignRight="@+id/etAmount"
+        android:onClick="onTipCalculate"
+        android:tag="0.2"
+        android:text="@string/tip2" />
+
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="124dp"
+        android:text="@string/tipAmount"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
