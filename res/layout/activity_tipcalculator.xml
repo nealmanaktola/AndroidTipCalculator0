@@ -4,61 +4,201 @@
     android:layout_height="match_parent"
     tools:context="${packageName}.${activityClass}" >
 
+    <ImageButton
+        android:id="@+id/btnTipDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnTipUp"
+        android:layout_below="@+id/btnTipUp"
+        android:background="@android:color/transparent"
+        android:onClick="onTipDownClick"
+        android:src="@drawable/ic_navigation_expand" />
+
     <EditText
         android:id="@+id/etAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:inputType="numberDecimal"
-        android:ems="10" >
+        android:gravity="center"
+        android:ems="10"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal" />
 
-        <requestFocus />
-    </EditText>
-
-    <Button
-        android:id="@+id/btnTip0"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/etAmount"
-        android:layout_below="@+id/etAmount"
-        android:layout_marginTop="66dp"
-        android:onClick="onTipCalculate"
-        android:tag="0.1"
-        android:text="@string/tip0" />
-
-    <Button
+    <ImageButton
         android:id="@+id/btnTip1"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnTip0"
+        android:layout_alignTop="@+id/btnTip0"
         android:layout_centerHorizontal="true"
-        android:onClick="onTipCalculate"
-        android:tag="0.15"
-        android:text="@string/tip1" />
+        android:background="@android:color/transparent"
+        android:onClick="onTipPresetClick"
+        android:src="@drawable/smile"
+        android:tag="0.15" />
 
-    <Button
-        android:id="@+id/btnTip2"
+    <TextView
+        android:id="@+id/tvGood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvFair"
+        android:layout_alignBottom="@+id/tvFair"
+        android:layout_alignLeft="@+id/btnTip1"
+        android:layout_alignRight="@+id/btnTip1"
+        android:gravity="center"
+        android:text="GOOD" />
+
+    <ImageButton
+        android:id="@+id/btnTip0"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btnTip1"
-        android:layout_alignRight="@+id/etAmount"
-        android:onClick="onTipCalculate"
-        android:tag="0.2"
-        android:text="@string/tip2" />
+        android:layout_below="@+id/etAmount"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="15dp"
+        android:background="@android:color/transparent"
+        android:onClick="onTipPresetClick"
+        android:src="@drawable/straight"
+        android:tag="0.1" />
 
     <TextView
         android:id="@+id/tvTipAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btnTipDown"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="124dp"
+        android:layout_marginTop="26dp"
         android:text="@string/tipAmount"
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnTip2"
+        android:layout_centerHorizontal="true"
+        android:text="RATE YOUR SERVICE" />
+
+    <TextView
+        android:id="@+id/tvGreat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvGood"
+        android:layout_alignBottom="@+id/tvGood"
+        android:layout_alignLeft="@+id/btnTip2"
+        android:layout_alignRight="@+id/btnTip2"
+        android:gravity="center"
+        android:text="GREAT" />
+
+    <TextView
+        android:id="@+id/tvFair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnTip0"
+        android:layout_alignRight="@+id/btnTip0"
+        android:layout_below="@+id/btnTip0"
+        android:gravity="center"
+        android:text="FAIR" />
+
+    <ImageButton
+        android:id="@+id/btnTip2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btnTip1"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/transparent"
+        android:onClick="onTipPresetClick"
+        android:src="@drawable/bigsmile"
+        android:tag="0.2" />
+
+    <ImageButton
+        android:id="@+id/btnTipUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/tvTipLabel"
+        android:background="@android:color/transparent"
+        android:onClick="onTipUpClick"
+        android:src="@drawable/ic_navigation_collapse" />
+
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTipAmount"
+        android:layout_alignLeft="@+id/tvTipPercent"
+        android:text="TIP PERCENTAGE" />
+
+    <ImageView
+        android:id="@+id/imgSplitIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_alignTop="@+id/tvTipPercent"
+        android:src="@drawable/user" />
+
+    <ImageButton
+        android:id="@+id/btnSplitDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvGreat"
+        android:layout_below="@+id/btnSplitUp"
+        android:background="@android:color/transparent"
+        android:onClick="onSplitDownClick"
+        android:src="@drawable/ic_navigation_expand" />
+
+    <ImageButton
+        android:id="@+id/btnSplitUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnSplitDown"
+        android:layout_alignTop="@+id/btnTipUp"
+        android:background="@android:color/transparent"
+        android:onClick="onSplitUpClick"
+        android:src="@drawable/ic_navigation_collapse" />
+
+    <TextView
+        android:id="@+id/tvTipPP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTipAmount"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@+id/tvTipPercent"
+        android:text="TIP PER PERSON:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tvTipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvTipAmount"
+        android:layout_alignLeft="@+id/tvFair"
+        android:text="10"
+        android:textColor="#09c"
+        android:textSize="70sp" />
+
+    <TextView
+        android:id="@+id/tvSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imgSplitIcon"
+        android:layout_alignTop="@+id/imgSplitIcon"
+        android:text="01"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#09c"
+        android:textSize="70sp" />
+
+    <TextView
+        android:id="@+id/tvSplitBillLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tvSplit"
+        android:layout_alignLeft="@+id/tvSplit"
+        android:layout_alignRight="@+id/imgSplitIcon"
+        android:gravity="center"
+        android:text="SPLIT BILL" />
 
 </RelativeLayout>

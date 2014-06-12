@@ -11,14 +11,35 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int bigsmile=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int ic_navigation_collapse=0x7f020002;
+        public static final int ic_navigation_expand=0x7f020003;
+        public static final int smile=0x7f020004;
+        public static final int straight=0x7f020005;
+        public static final int tip_calc=0x7f020006;
+        public static final int user=0x7f020007;
     }
     public static final class id {
-        public static final int btnTip0=0x7f060001;
-        public static final int btnTip1=0x7f060002;
-        public static final int btnTip2=0x7f060003;
-        public static final int etAmount=0x7f060000;
-        public static final int tvTipAmount=0x7f060004;
+        public static final int TextView01=0x7f060008;
+        public static final int btnSplitDown=0x7f06000e;
+        public static final int btnSplitUp=0x7f06000f;
+        public static final int btnTip0=0x7f060004;
+        public static final int btnTip1=0x7f060003;
+        public static final int btnTip2=0x7f060009;
+        public static final int btnTipDown=0x7f060000;
+        public static final int btnTipUp=0x7f060001;
+        public static final int etAmount=0x7f060002;
+        public static final int imgSplitIcon=0x7f06000d;
+        public static final int tvFair=0x7f060006;
+        public static final int tvGood=0x7f060005;
+        public static final int tvGreat=0x7f06000a;
+        public static final int tvSplit=0x7f060011;
+        public static final int tvSplitBillLabel=0x7f060012;
+        public static final int tvTipAmount=0x7f060007;
+        public static final int tvTipLabel=0x7f06000b;
+        public static final int tvTipPP=0x7f060010;
+        public static final int tvTipPercent=0x7f06000c;
     }
     public static final class layout {
         public static final int activity_tipcalculator=0x7f030000;
