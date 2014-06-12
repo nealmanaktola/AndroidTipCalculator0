@@ -19,5 +19,5 @@ Optional Stories:
 5)  Improve UI/colors (Flat UI, blue/white colors), used Dialog Fragments.  
   
   
-![alt text](https://github.com/nealmanaktola/AndroidTipCalculator0/blob/master/TipCalculator3.gif "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/nealmanaktola/AndroidTipCalculator0/master/TipCalculator3.gif "Logo Title Text 1")
     
