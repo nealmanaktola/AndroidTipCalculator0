@@ -15,6 +15,6 @@ Optional Stories:
   User can select custom tip percentage if desired
   User can select how many ways to split the tip
   Experiment with trying input widgets (Imagebuttons)
-  Improve UI/colors (Flat UI, blue/white colors), used Dialog Fragments
+  Improve UI/colors (Flat UI, blue/white colors), used Dialog Fragments.
   
     
